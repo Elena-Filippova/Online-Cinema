@@ -32,6 +32,7 @@
   --font-family: "Roboto", system-ui;
   --white: #ffffff;
   --dark-red: #621402;
+  --transition: all 0.3s ease-in-out;
 }
 
 html,
@@ -44,6 +45,7 @@ body {
   background-repeat: no-repeat;
   background-image: url('../images/bg.webp');
   background-color: var(--dark-red);
+  color: var(--white);
 }
 
 img {
@@ -61,7 +63,7 @@ a {
   color: inherit;
 }
 
-p {
+p, h1 {
   margin: 0;
 }
 
@@ -102,7 +104,6 @@ ul {
 
 .nav-list-item {
   font-family: var(--font-family);
-  color: var(--white);
 }
 
 .user {
@@ -114,10 +115,165 @@ ul {
 
 .user-text {
   font-size: 16px;
-  color: var(--white);
 }
 
 .user-img {
   width: 33px;
   height: 33px;
+}
+
+.film-wrapper {
+  padding: 60px 0 53px;
+  display: flex;
+  align-items: center;
+}
+
+.film-subtitle {
+  margin-bottom: 11px;
+  display: block;
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+}
+
+.film-title {
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.film-descr {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.film-trailer  {
+  margin: auto;
+}
+
+.film-details {
+  margin-bottom: 69px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.time img {
+  width: 20px;
+  height: 20px;
+}
+
+.time span {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating img {
+  width: 35px;
+  height: 17.5px;
+}
+
+.rating span {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.rating strong {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.session {
+  padding: 46px 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.session-label {
+  margin-bottom: 33px;
+  display: block;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.session-date .session-label {
+  margin-bottom: 20px;
+}
+
+.session-date-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.session-date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: var(--transition);
+}
+
+.session-date-item:hover {
+  background-color: #fe8e05;
+  color: var(--dark-red);
+}
+
+.session-month {
+  font-size: 16px;
+}
+
+.session-day {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.session-day-week {
+  font-size: 19px;
+}
+
+.select {
+  padding: 18px;
+  height: 60px;
+  font-size: 16px;
+  line-height: 150%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+.select option {
+  background-color: var(--dark-red);
+}
+
+.select-cinema {
+  width: 470px;
+}
+
+.select-time {
+  width: 108px;
 }
