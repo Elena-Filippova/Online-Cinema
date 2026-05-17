@@ -31,6 +31,7 @@
 :root {
   --font-family: "Roboto", system-ui;
   --white: #ffffff;
+  --orange: #fe8e05;
   --dark-red: #621402;
   --transition: all 0.3s ease-in-out;
 }
@@ -41,7 +42,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   background-position: top;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../images/bg.webp');
   background-color: var(--dark-red);
@@ -236,7 +237,7 @@ ul {
 }
 
 .session-date-item:hover {
-  background-color: #fe8e05;
+  background-color: var(--orange);
   color: var(--dark-red);
 }
 
@@ -276,4 +277,101 @@ ul {
 
 .select-time {
   width: 108px;
+}
+
+.places-wrapper {
+  padding: 63px 0 158px;
+}
+
+hr {
+  margin: 0;
+  opacity: 0.5;
+}
+
+.scheme {
+  border-radius: 10px;
+  background-color: rgba(36, 36, 36, 0.18);
+}
+
+.scheme path:not(.light) {
+  cursor: pointer;
+  fill: rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.scheme path:not(.light):hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.scheme path.booked,
+.scheme path.booked:hover {
+  cursor: not-allowed;
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.legend {
+  margin: 0 auto;
+  padding: 22px 0 38px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1018px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.legend-group {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.legend-group span {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.legend-active svg path {
+  fill: var(--orange);
+  stroke-width: 2px;
+  stroke: var(--orange);
+}
+
+.legend-active span {
+  opacity: 1;
+  color: var(--orange);
+}
+
+.scheme path.active,
+.scheme path.active:hover {
+  fill: var(--orange);
+}
+
+.price {
+  padding-top: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.price-total,
+.price-symbol {
+  font-size: 52px;
+}
+
+.price-total {
+  margin-right: 12px;
+}
+
+.button-pay {
+  padding: 24px 52px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: var(--orange);
 }
