@@ -112,6 +112,14 @@ ul {
   gap: 25px;
 }
 
+.nav-list a {
+  transition: var(--transition);
+}
+
+.nav-list a:hover {
+  color: var(--orange);
+}
+
 .user {
   margin-left: auto;
   display: flex;
