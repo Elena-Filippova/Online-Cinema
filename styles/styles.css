@@ -385,6 +385,12 @@ hr {
   font-size: 18px;
   border-radius: 5px;
   background-color: var(--orange);
+  transition: var(--transition);
+}
+
+.button-pay:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 @media (width <= 1200px) {
