@@ -1,5 +1,7 @@
 const schemeSvg = document.querySelector('.scheme-svg')
 const totalPriceText = document.querySelector('.price-total')
+const burgerBtn = document.querySelector('.burger')
+const navList = document.querySelector('.nav-list')
 
 let cost = 800
 let totalPrice = 0
@@ -14,4 +16,8 @@ schemeSvg.addEventListener('click', (event) => {
     
     totalPriceText.textContent = totalPrice
   }
+})
+
+burgerBtn.addEventListener('click', () => {
+  navList.classList.toggle('is-open')
 })
